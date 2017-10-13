@@ -7,8 +7,8 @@ Created on Thu Oct  5 12:15:33 2017
 """
 
 from timeit import default_timer as timer
-from my_vgg16_lib.backend_switch import set_backend # most time-consuming operation ~7s
-from my_vgg16_lib.vgg16_feature_extraction import vgg16_feature_extractor as extract
+from my_lib.backend_switch import set_backend # most time-consuming operation ~7s
+from my_lib.vgg16_feature_extraction import vgg16_feature_extractor as extract
 
 # set backend
 backend_selection = input('\nSelect keras backend:\n[t]ensorflow(default), thean[o]\t')

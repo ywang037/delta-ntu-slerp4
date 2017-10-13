@@ -7,7 +7,7 @@ Created on Thu Oct  5 12:15:33 2017
 """
 
 from timeit import default_timer as timer
-from my_vgg16_lib.vgg16_feature_extraction import vgg16_feature_extractor as extract
+from my_lib.vgg16_feature_extraction import vgg16_feature_extractor as extract
 from keras import backend as K
 import os
 import importlib
