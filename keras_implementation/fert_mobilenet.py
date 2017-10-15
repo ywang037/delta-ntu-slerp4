@@ -25,8 +25,11 @@ elif K.backend() == tf:
     print('{} backend has already been set'.format(K.backend()))
 
 # Setup the model
+time_load_model_start = timer()
 model = MobileNet(input_shape=(224,224,3), alpha=1.0, depth_multiplier=1, dropout=1e-3, include_top=False, weights='imagenet', input_tensor=None, pooling='avg')
-# model = Model(inputs=base_model.input, outputs=base_model.get_layer('fc2').output)
+time_load_model_end = timer()
+print('Deep CNN model InceptionV3 is loaded, time taken: {} seconds'.format(time_load_model_end-time_load_model_start))
+
 
 # initiate the time record
 num_trial = int(input('Please set number of trials: '))

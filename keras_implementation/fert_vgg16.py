@@ -26,8 +26,11 @@ elif K.backend() == tf:
     print('{} backend has already been set'.format(K.backend()))
 
 # Setup the model
+time_load_model_start = timer()
 base_model = VGG16(weights='imagenet')
 model = Model(inputs=base_model.input, outputs=base_model.get_layer('fc2').output)
+time_load_model_end = timer()
+print('Deep CNN model VGG-16 is loaded, time taken: {} seconds'.format(time_load_model_end-time_load_model_start))
 
 # initiate the time record
 num_trial = int(input('Please set number of trials: '))
@@ -37,7 +40,7 @@ time_elapsed = 0
 file = open('fert_time_record_vgg16.csv','w+')
 
 for i in range(num_trial):
-#    print('This is {}-th trial.\n'.format(i+1))    
+#    print('This is {}-th trial.\n'.format(i+1))
     time_start = timer()
     # Load input image
     img_path = 'dog.jpg'
@@ -45,18 +48,18 @@ for i in range(num_trial):
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     x = preprocess_input(x)
-    
+
     # Extract feature
     features = model.predict(x)
-    
+
     time_end = timer()
-    
+
     # record time used for i-th trial
     time_elapsed += (time_end-time_start)
-    
+
     # print results on screen
     print('{}-th trial is done! Features from block 5 are extracted, using {} seconds.'.format(i+1,time_end-time_start))
-    
+
     # write time record to file
     file.write(str(time_end-time_start)+'\n')
 

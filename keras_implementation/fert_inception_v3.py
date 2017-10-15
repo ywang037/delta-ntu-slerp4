@@ -25,8 +25,11 @@ elif K.backend() == tf:
     print('{} backend has already been set'.format(K.backend()))
 
 # Setup the model
+time_load_model_start = timer()
 model = InceptionV3(include_top=False, weights='imagenet', input_tensor=None, input_shape=None, pooling='avg')
-# model = Model(inputs=base_model.input, outputs=base_model.get_layer('fc2').output)
+time_load_model_end = timer()
+print('Deep CNN model InceptionV3 is loaded, time taken: {} seconds'.format(time_load_model_end-time_load_model_start))
+
 
 # initiate the time record
 num_trial = int(input('Please set number of trials: '))
@@ -38,10 +41,12 @@ file = open('fert_time_record_inception_v3.csv','w+')
 
 for i in range(num_trial):
 #    print('This is {}-th trial.\n'.format(i+1))
-    time_start = timer()
+    # time_start = timer()
     # Load input image
     img_path = 'dog.jpg'
     img = image.load_img(img_path, target_size=(224, 224))
+
+    time_start = timer()
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     x = preprocess_input(x)
