@@ -15,4 +15,4 @@ To train a convnet from stratch, one can adopt any of the following methods:
 - For developing or modifying your own models, see also the [main TF-Slim page](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim) where training a VGG-16 is provided as an example.
 - Using keras function [model.fit](https://keras.io/getting-started/sequential-model-guide/#training), one can refer to section [Fine-tune InceptionV3 on a new set of classes](https://keras.io/applications/) or [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html) as examples how model.fit are invoked.
 
-The official github repository can be found [here](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+The official github repository of MobileNets can be found [here](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
