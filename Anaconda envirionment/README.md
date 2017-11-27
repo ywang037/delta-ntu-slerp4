@@ -4,4 +4,7 @@ After successfully installed Anaconda, navigate to [this page](https://www.tenso
 
 1. Download and install the Anaconda.
 2. Create a conda environment named tensorflow by invoking the following command:
+```
+C:> conda create -n tensorflow python=3.5 
+```
 
