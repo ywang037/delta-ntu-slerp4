@@ -1,31 +1,32 @@
-In this folder, we put files for installing the Tensorflow, Keras, OpenCV, and dlib based on the [Anaconda](https://www.anaconda.com/download/). Below we give a brief summary of the essential steps:
+# Install TesorFlow and Keras with Ananconda
 
-### 1 Download and install the Anaconda. 
+### Download and install the Anaconda. 
+Donwload and install the latest version of Anaconda from [official website](https://www.anaconda.com/download/). 
 
-After successfully installed Anaconda, navigate to [this page](https://www.tensorflow.org/install/install_windows#installing_with_anaconda) then follow the instructions to install the TensorFlow on windows through the Anaconda. Be advised that, one should operate in the Anaconda Prompt instead of windows command prompt. Just find the Anaconda Prompt in the windows start menu, and give it a run. 
-
-
-### 2 Install TensorFlow through Anaconda
-2.1 Create a conda environment named tensorflow by invoking the following command:
+2.1 [Create a conda environment](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) (here it is named my_tf) by invoking the following command:
 ```
-C:> conda create -n tensorflow python=3.5 
+C:> conda create -n my_tf python=3.5 
 ```
 2.2 Activate the conda environment by issuing the following command:
 ```
-C:> activate tensorflow
+C:> activate my_tf
  (tensorflow)C:>  # Your prompt should change
 ```
-If you start from windows commamd line, i.e, run cmd by Ctrl+R. Suppose the current directory is C:\Users\user-name\, and the conda environment name is "env-name" then issue the following command to navigate to the Scripts folder:
-```
-cd Anaconda3/Scripts/
-```
-then run
-```
-activate env-name
-```
-to enter the conda environment "env-name"
 
-2.3 Issue the appropriate command to install TensorFlow inside your conda environment. To install the CPU-only version of TensorFlow, enter the following command:
+### 2 Install TensorFlow through Anaconda
+After successfully installed Anaconda, navigate to [this page](https://www.tensorflow.org/install/install_windows#installing_with_anaconda) then follow the instructions to install the TensorFlow on windows through the Anaconda. 
+
+Please make sure that the following will be operated under the created Ancaonda envirionment, so if you start freshly with the Anaconda Prompt, issue the following first (repalce env_name with the name of desired envirionment)
+```
+activate env_name
+```
+If you start from windows commamd line, i.e, run cmd by Ctrl+R. Navigate to Suppose the directory C:\Users\user-name\Anaconda3\Scripts, then run
+```
+activate my_tf
+```
+Replace "user-name" in the path with the actual user name.
+
+To install the CPU-only version of TensorFlow, enter the following command:
 ```
 (tensorflow)C:> pip install --ignore-installed --upgrade tensorflow 
 ```
@@ -35,7 +36,7 @@ To install the GPU version of TensorFlow, enter the following command (on a sing
 ```
 
 ### 3 Install Keras
-First, install a few Python dependencies(under conda environment created):
+Firstly, install a few Python dependencies (under the same conda environment where tensorflow is installed):
 ```
 pip install h5py
 pip install pillow
