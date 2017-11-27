@@ -15,7 +15,7 @@ C:> conda create -n tensorflow python=3.5
 C:> activate tensorflow
  (tensorflow)C:>  # Your prompt should change
 ```
-- if you start from windows commamd line, i.e, run cmd by Ctrl+R. Suppose the current directory is C:\Users\user-name\, and the conda environment name is "env-name" then issue the following command to navigate to the Scripts folder:
+If you start from windows commamd line, i.e, run cmd by Ctrl+R. Suppose the current directory is C:\Users\user-name\, and the conda environment name is "env-name" then issue the following command to navigate to the Scripts folder:
 ```
 cd Anaconda3/Scripts/
 ```
