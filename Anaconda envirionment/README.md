@@ -1,4 +1,4 @@
-# Install TesorFlow and Keras with Ananconda
+# Install TesorFlow and Keras with Ananconda on Windows
 
 ### Download and install the Anaconda. 
 Donwload and install the latest version of Anaconda from [official website](https://www.anaconda.com/download/). 
