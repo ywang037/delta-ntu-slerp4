@@ -1,6 +1,6 @@
 # Install TesorFlow and Keras with Ananconda on Windows
 
-### Download and install the Anaconda. 
+### Step 1 - Download and install the Anaconda. 
 Donwload and install the latest version of Anaconda from [official website](https://www.anaconda.com/download/). 
 
 [Create a conda environment](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) by invoking the following command (here it is named my_tf):
