@@ -13,7 +13,7 @@ C:> activate my_tf
  (tensorflow)C:>  # Your prompt should change
 ```
 
-### 2 Install TensorFlow through Anaconda
+### Step 2 - Install TensorFlow through Anaconda
 After successfully installed Anaconda, navigate to [this page](https://www.tensorflow.org/install/install_windows#installing_with_anaconda) then follow the instructions to install the TensorFlow on windows through the Anaconda. 
 
 Please make sure that the following will be operated under the created Ancaonda envirionment, so if you start freshly with the Anaconda Prompt, issue the following first (repalce env_name with the name of desired envirionment)
@@ -35,7 +35,7 @@ To install the GPU version of TensorFlow, enter the following command (on a sing
 (tensorflow)C:> pip install --ignore-installed --upgrade tensorflow-gpu 
 ```
 
-### 3 Install Keras
+### Step 3 - Install Keras
 Firstly, install a few Python dependencies (under the same conda environment where tensorflow is installed):
 ```
 pip install h5py
