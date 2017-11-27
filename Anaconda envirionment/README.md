@@ -35,8 +35,8 @@ To install the GPU version of TensorFlow, enter the following command (on a sing
 (tensorflow)C:> pip install --ignore-installed --upgrade tensorflow-gpu 
 ```
 
-### Step 3 - Install Keras
-Firstly, install a few Python dependencies (under the same conda environment where tensorflow is installed):
+### Step 3 - Install Keras through Anaconda
+After the TensorFlow is successfully installed, under the same conda environment where tensorflow is installed, install the following Python dependencies first (noted that numpy is installed during Tensorflow installation, and scipy will be installed during Keras installation):
 ```
 pip install h5py
 pip install pillow
