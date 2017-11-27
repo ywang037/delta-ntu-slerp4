@@ -3,11 +3,11 @@
 ### Download and install the Anaconda. 
 Donwload and install the latest version of Anaconda from [official website](https://www.anaconda.com/download/). 
 
-2.1 [Create a conda environment](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) (here it is named my_tf) by invoking the following command:
+[Create a conda environment](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) by invoking the following command (here it is named my_tf):
 ```
 C:> conda create -n my_tf python=3.5 
 ```
-2.2 Activate the conda environment by issuing the following command:
+Activate the conda environment by issuing the following command:
 ```
 C:> activate my_tf
  (tensorflow)C:>  # Your prompt should change
