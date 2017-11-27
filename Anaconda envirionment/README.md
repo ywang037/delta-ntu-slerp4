@@ -5,12 +5,13 @@ Donwload and install the latest version of Anaconda from [official website](http
 
 [Create a conda environment](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) by invoking the following command (here it is named my_tf):
 ```
-C:> conda create -n my_tf python=3.5 
+conda create -n my_tf python=3.5 
 ```
 Activate the conda environment by issuing the following command:
 ```
-C:> activate my_tf
- (tensorflow)C:>  # Your prompt should change
+activate my_tf
+# Your prompt should change like
+ (my_tf) C:\>
 ```
 
 ### Step 2 - Install TensorFlow through Anaconda
@@ -28,11 +29,11 @@ Replace "user-name" in the path with the actual user name.
 
 To install the CPU-only version of TensorFlow, enter the following command:
 ```
-(tensorflow)C:> pip install --ignore-installed --upgrade tensorflow 
+pip install --ignore-installed --upgrade tensorflow 
 ```
 To install the GPU version of TensorFlow, enter the following command (on a single line):
 ```
-(tensorflow)C:> pip install --ignore-installed --upgrade tensorflow-gpu 
+pip install --ignore-installed --upgrade tensorflow-gpu 
 ```
 
 ### Step 3 - Install Keras through Anaconda
