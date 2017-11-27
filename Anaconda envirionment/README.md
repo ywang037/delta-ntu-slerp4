@@ -3,7 +3,7 @@
 ### Step 1 - Download and install the Anaconda. 
 Donwload and install the latest version of Anaconda from [official website](https://www.anaconda.com/download/). 
 
-[Create a conda environment](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) by invoking the following command (here it is named my_tf):
+[Create a conda environment](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) by invoking the following command (here it is named my_tf, replace it with any other names):
 ```
 conda create -n my_tf python=3.5 
 ```
@@ -17,9 +17,9 @@ activate my_tf
 ### Step 2 - Install TensorFlow through Anaconda
 After successfully installed Anaconda, navigate to [this page](https://www.tensorflow.org/install/install_windows#installing_with_anaconda) then follow the instructions to install the TensorFlow on windows through the Anaconda. 
 
-Please make sure that the following will be operated under the created Ancaonda envirionment, so if you start freshly with the Anaconda Prompt, issue the following first (repalce env_name with the name of desired envirionment)
+Please make sure that the following will be operated under the created Ancaonda envirionment, so if you start freshly with the Anaconda Prompt, issue the following first:
 ```
-activate env_name
+activate my_tf
 ```
 If you start from windows commamd line, i.e, run cmd by Ctrl+R. Navigate to Suppose the directory, 
 ```
