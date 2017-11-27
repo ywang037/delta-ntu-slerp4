@@ -21,7 +21,11 @@ Please make sure that the following will be operated under the created Ancaonda 
 ```
 activate env_name
 ```
-If you start from windows commamd line, i.e, run cmd by Ctrl+R. Navigate to Suppose the directory C:\Users\user-name\Anaconda3\Scripts, then run
+If you start from windows commamd line, i.e, run cmd by Ctrl+R. Navigate to Suppose the directory, 
+```
+C:\Users\user-name\Anaconda3\Scripts
+```
+then run
 ```
 activate my_tf
 ```
