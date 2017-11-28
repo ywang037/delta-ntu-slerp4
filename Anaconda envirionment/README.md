@@ -38,7 +38,12 @@ pip install --ignore-installed --upgrade tensorflow
 ```
 
 #### GPU Version
-To install the GPU version of TensorFlow, install all necessary GPU accelaration software package first (following the instructions on [Tensorflow website](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support)), then enter the following command (on a single line):
+To install the GPU version of TensorFlow, follow the instructions on [Tensorflow website](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support) to install all necessary GPU accelaration software package first:
+- [CUDA v8.0](https://developer.nvidia.com/cuda-80-ga2-download-archive) and [installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html) (for v9.0 as a reference).
+- cuDNN v6.0 ([follow this post to download](https://devtalk.nvidia.com/default/topic/1023497/gpu-accelerated-libraries/no-link-to-download-cudnn-v6-or-v6-1/1)), and [its installation guide](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows)
+
+
+then enter the following command (on a single line):
 ```
 pip install --ignore-installed --upgrade tensorflow-gpu 
 ```
