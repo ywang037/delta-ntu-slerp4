@@ -31,10 +31,13 @@ activate my_tf
 ```
 Replace "user-name" in the path with the actual user name.
 
+#### CPU-only Version
 To install the CPU-only version of TensorFlow, enter the following command:
 ```
 pip install --ignore-installed --upgrade tensorflow 
 ```
+
+#### GPU Version
 To install the GPU version of TensorFlow, install all necessary GPU accelaration software package first (following the instructions on [Tensorflow website](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support)), then enter the following command (on a single line):
 ```
 pip install --ignore-installed --upgrade tensorflow-gpu 
