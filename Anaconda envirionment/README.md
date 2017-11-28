@@ -39,7 +39,8 @@ pip install --ignore-installed --upgrade tensorflow
 
 #### GPU Version
 To install the GPU version of TensorFlow, follow the instructions on [Tensorflow website](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support) to install all necessary GPU accelaration software package first:
-- [CUDA v8.0](https://developer.nvidia.com/cuda-80-ga2-download-archive) and [installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html) (for v9.0 as a reference).
+- Install Microsoft Visual Studio 2015 (NOT 2017), since CUDA 8.0 only recognize VS2015. A possible way to resolve incompatibility between VS2017 and CUDA 8.0 is reported at [this post](https://stackoverflow.com/questions/43745099/using-cuda-with-visual-studio-2017) and [this blog](https://www.olegtarasov.me/how-to-build-cuda-toolkit-projects-in-visual-studio-2017/).
+- [CUDA v8.0](https://developer.nvidia.com/cuda-80-ga2-download-archive) and [installation guide](http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html) (for v9.0 as a reference). 
 - cuDNN v6.0 ([follow this post to download](https://devtalk.nvidia.com/default/topic/1023497/gpu-accelerated-libraries/no-link-to-download-cudnn-v6-or-v6-1/1)), and [its installation guide](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows)
 
 
