@@ -8,7 +8,7 @@ In this folder, some [example python programs](./example_face_det_webcam.py) are
 
 ~~This page [Real-time facial landmark detection with OpenCV, Python, and dlib](https://www.pyimagesearch.com/2017/04/17/real-time-facial-landmark-detection-opencv-python-dlib/) and other related articles e.g., [How to install dlib](https://www.pyimagesearch.com/2017/03/27/how-to-install-dlib/) on the same websites (just use search bar with keyword dlib or opencv) are good tutorials to kick off.~~
 
-## Loading images
+## Tips of loading images
 To laod images as numpy array, several methods can be adopted
 ```
 """
