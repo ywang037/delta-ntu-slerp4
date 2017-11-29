@@ -11,11 +11,23 @@ This page [Real-time facial landmark detection with OpenCV, Python, and dlib](ht
 ## Loading images
 To laod images as numpy array, several methods can be adopted
 ```
-    """
-    Loads an image file (.jpg, .png, etc) into a numpy array
-    :param file: image file name or file object to load
-    :param mode: format to convert the image to. Only 'RGB' (8-bit RGB, 3 channels) and 'L' (black and white) are supported.
-    :return: image contents as numpy array
-    """
-scipy.misc.imread(file, mode=mode)
+"""
+Loads an image file (.jpg, .png, etc) into a numpy array
+mode: format to convert the image to. Only 'RGB' (8-bit RGB, 3 channels) and 'L' (black and white) are supported.
+"""
+img = scipy.misc.imread(file, mode=mode)
+```
+or using *scikit-image* which can be installed via the command:
+```
+pip install scikit-image
+```
+and call like below
+```
+from skimage import io
+img = io.imread(file)
+```
+or using openCV as
+```
+import cv2
+image = cv2.imread(image_path)
 ```
