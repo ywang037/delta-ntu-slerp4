@@ -1,6 +1,8 @@
 ## General information
 
-This folder collects information and tutorials from internet that introduce how to do face detection, using the [dlib](http://dlib.net/python/index.html) or [OpenCV](https://opencv.org/). 
+This folder collects information and tutorials from internet that introduce how to do face detection, using the [dlib](http://dlib.net/python/index.html) or [OpenCV](https://opencv.org/). They can be [installed via anaconda virtual environment](http://www.codesofinterest.com/2016/10/installing-dlib-on-anaconda-python-on.html), just like how tensorflow and keras ara installed. 
+
+Basically, the OpenCV is used for capturing frames from camera stream and display images on output windows, while the dlib is used for face detection. Please refer to the [example python programs under this directory](./example_face_det_webcam.py) for details.
 
 ~~The project [OpenFace](https://cmusatyalab.github.io/openface/) introduce how they implement the entire pipline with FaceNet.~~
 
