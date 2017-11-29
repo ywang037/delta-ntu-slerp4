@@ -4,13 +4,6 @@ In this folder, some [example python programs](./example_face_det_webcam.py) are
 
 Basically, the OpenCV is used for capturing frames from camera stream, loading images from disk, and displaying images on output windows, while the dlib is used for face detection. Some other good eamples for using OpenCV and dlib can be found [in this repository](https://github.com/ageitgey/face_recognition/tree/master/examples) and [in the dlib repository of python examples](https://github.com/davisking/dlib/tree/master/python_examples).
 
-
-~~The project [OpenFace](https://cmusatyalab.github.io/openface/) introduce how they implement the entire pipline with FaceNet.~~
-
-~~The blog [Building a Facial Recognition Pipeline with Deep Learning in Tensorflow](https://hackernoon.com/building-a-facial-recognition-pipeline-with-deep-learning-in-tensorflow-66e7645015b8) also uses dlib.~~
-
-~~This page [Real-time facial landmark detection with OpenCV, Python, and dlib](https://www.pyimagesearch.com/2017/04/17/real-time-facial-landmark-detection-opencv-python-dlib/) and other related articles e.g., [How to install dlib](https://www.pyimagesearch.com/2017/03/27/how-to-install-dlib/) on the same websites (just use search bar with keyword dlib or opencv) are good tutorials to kick off.~~
-
 ## Tips of loading images
 To laod images as numpy array, several methods can be adopted
 ```
