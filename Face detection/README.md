@@ -9,3 +9,13 @@ The blog [Building a Facial Recognition Pipeline with Deep Learning in Tensorflo
 This page [Real-time facial landmark detection with OpenCV, Python, and dlib](https://www.pyimagesearch.com/2017/04/17/real-time-facial-landmark-detection-opencv-python-dlib/) and other related articles e.g., [How to install dlib](https://www.pyimagesearch.com/2017/03/27/how-to-install-dlib/) on the same websites (just use search bar with keyword dlib or opencv) are good tutorials to kick off.
 
 ## Loading images
+To laod images as numpy array, several methods can be adopted
+```
+    """
+    Loads an image file (.jpg, .png, etc) into a numpy array
+    :param file: image file name or file object to load
+    :param mode: format to convert the image to. Only 'RGB' (8-bit RGB, 3 channels) and 'L' (black and white) are supported.
+    :return: image contents as numpy array
+    """
+scipy.misc.imread(file, mode=mode)
+```
