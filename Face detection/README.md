@@ -17,11 +17,7 @@ mode: format to convert the image to. Only 'RGB' (8-bit RGB, 3 channels) and 'L'
 """
 img = scipy.misc.imread(file, mode=mode)
 ```
-or using *scikit-image* which can be installed via the command:
-```
-pip install scikit-image
-```
-and call like below
+or using *scikit-image* which can be installed by `pip install scikit-image` and called as below
 ```
 from skimage import io
 img = io.imread(file)
