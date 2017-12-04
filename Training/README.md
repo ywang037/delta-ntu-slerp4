@@ -17,7 +17,7 @@ To train a convnet from stratch, one can adopt any of the following methods:
   - [Keras Tutorial: The Ultimate Beginner’s Guide to Deep Learning in Python](https://elitedatascience.com/keras-tutorial-deep-learning-in-python)
   - [Develop Your First Neural Network in Python With Keras Step-By-Step](https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/)
   - [Training neural networks efficiently using Keras](https://www.packtpub.com/books/content/training-neural-networks-efficiently-using-keras)
-  - [Training AlexNet, using Keras and Theano](https://github.com/duggalrahul/AlexNet-Experiments-Keras/blob/master/Code/AlexNet_Experiments.ipynb)
+  - [Training AlexNet, using Keras and Theano (the most useful example)](https://github.com/duggalrahul/AlexNet-Experiments-Keras/blob/master/Code/AlexNet_Experiments.ipynb)
 
 The following shows how to take a pre-trained Inception v3 or Mobilenet model, and train a new top layer that can recognize other classes of images (transfer learning).
 - Using [retrain.py](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/image_retraining) provided by tensorflow official examples, this [blog](https://hackernoon.com/creating-insanely-fast-image-classifiers-with-mobilenet-in-tensorflow-f030ce0a2991) and [this one](https://hackernoon.com/building-an-insanely-fast-image-classifier-on-android-with-mobilenets-in-tensorflow-dc3e0c4410d4) are tutorials which how to use retrain.py as couples of lines of codes in python.
