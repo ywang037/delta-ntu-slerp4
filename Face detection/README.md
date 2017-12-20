@@ -8,6 +8,8 @@ Basically, the OpenCV is used for capturing frames from camera stream, loading i
 
 An interesting comparision of face detection performance [is reported here](https://github.com/andreimuntean/Dlib-vs-OpenCV), it is found that dlib out performs OpenCV in terms of face finding accuracy, however [OpenCV can be much faster than dlib on ARM-based platforms.](https://github.com/cmusatyalab/openface/issues/157)
 
+Indeed, OpenCV face detection is much faster than dlib. However, when it comes to the detection accuracy dlib can detect occluded faces, which cannot be achieved by OpenCV.
+
 ## Tips of loading images
 To laod images as numpy array, several methods can be adopted
 ```
