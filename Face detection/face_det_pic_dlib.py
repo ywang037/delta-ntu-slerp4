@@ -30,6 +30,9 @@ img_file = args["image"]
 #img_file = 'P2_480.jpg'
 img_name = img_path + img_file
 
+#img_name = 'test faces/ronaldo_1080.jpg'
+#img_name = 'test faces/group.jpg'
+
 # load image using openCV
 time_load_img_start = timer()
 image = cv2.imread(img_name)
@@ -42,18 +45,20 @@ grayimage = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # detect faces using dlib
 time_face_det_start = timer()
 faces = detector(grayimage, 1)
-#time_face_det_end = timer()
-#print('{} faces are detected in: {} seconds'.format(len(faces),time_face_det_end-time_face_det_start))    
-
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-win.clear_overlay()
-win.set_image(image)
-win.add_overlay(faces)
-
+for face in faces:    
+    cv2.rectangle(image, (face.left(), face.top()), (face.right(), face.bottom()), (0, 0, 255), 2)
 time_face_det_end = timer()
 print('{} faces are detected in: {} seconds'.format(len(faces),time_face_det_end-time_face_det_start)) 
+cv2.imshow('imege',image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
-dlib.hit_enter_to_continue()
+#image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+#win.clear_overlay()
+#win.set_image(image)
+#win.add_overlay(faces)
+#dlib.hit_enter_to_continue()
+
 
 ## Crop the patch with face detected
 #face = faces[0]

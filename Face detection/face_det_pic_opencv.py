@@ -24,10 +24,11 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 img_path = 'test faces/'
 img_file = args["image"]
-#img_file = 'p2_720.jpg'
-#img_file = 'p3_720.jpg'
-#img_file = 'P2_480.jpg'
+#img_file = 'players_1080.jpg'
 img_name = img_path + img_file
+
+#img_name = 'test faces/players_1080.jpg'
+#img_name = 'test faces/group.jpg'
 
 # load image using openCV
 time_load_img_start = timer()
@@ -47,14 +48,12 @@ faces = face_cascade.detectMultiScale(grayimage, 1.3, 5)
 #image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 for (x,y,width,height) in faces:
     cv2.rectangle(image,(x,y),(x+width,y+height),(255,0,0),2)
-    roi_gray = grayimage[y:y+height, x:x+width]
-    roi_color = image[y:y+height, x:x+width]
 
 time_face_det_end = timer()
 print('{} faces are detected in: {} seconds'.format(len(faces),time_face_det_end-time_face_det_start))  
 
 cv2.imshow('imege',image)
-cv2.waitKey(10000)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 ## Crop the patch with face detected
@@ -62,6 +61,7 @@ cv2.destroyAllWindows()
 #[x1,x2,y1,y2] = [face.left(), face.right(), face.top(), face.bottom()]
 #new_image = image[y1:y2, x1:x2]
 #new_image = cv2.resize(new_image,(224, 224), interpolation = cv2.INTER_CUBIC)
+
 
 ## Crop the patch with face detected
 #for i,d in enumerate(faces): 
