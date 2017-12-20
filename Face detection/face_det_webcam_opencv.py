@@ -8,17 +8,17 @@ Created on Wed Nov 29 15:15:01 2017
 # import necessary APIs
 import cv2
 from timeit import default_timer as timer
-import math
+#import math
 import argparse
 
 ap = argparse.ArgumentParser()
 ap.add_argument('-r', '--resolution', 
                 default='720p', 
-                choice=['480p','720p','1080p'],	
+                choices=['480p','720p','1080p'],	
                 help='camera resolution')
 ap.add_argument('-sf','--scalefactor',
                 default=1.0,
-                type=int,
+                type=float,
                 help='multiplication factor for resizing frame dimension')
 args = vars(ap.parse_args())
 
@@ -74,26 +74,11 @@ while True:
     #print('{} faces are detected in: {} seconds'.format(len(faces),time_face_det_end-time_face_det_start))    
     #print("Number of faces detected: {}".format(len(faces)))    
 
-    # pick the largest face, in dlib.rectangle class
-    try:    
-        face = max(faces, key=lambda rect: rect.width()*rect.height())
-    
-        # face locations in small frame
-        face_loc_small = [face.left(), face.right(), face.top(), face.bottom()]
-        
-        # face locations in original frame
-        # up_scale = 1/scale_factor
-        [left, right, top, bottom] = [math.ceil(x/sf) for x in face_loc_small]   
-    	
-        # draw a box around the detected face
-        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-    	
-        # display time used by detection	
-        font = cv2.FONT_HERSHEY_DUPLEX
-        cv2.putText(frame, time, (left + 0, bottom + 25), font, 1.0, (255, 255, 255), 1)
-        #frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    except Exception:
-        continue
+    font = cv2.FONT_HERSHEY_DUPLEX
+    for (x,y,width,height) in faces:
+        cv2.rectangle(frame,(x,y),(x+width,y+height),(255,0,0),2)
+        cv2.putText(frame, time, (x+0, y+height+25), font, 1.0, (255, 255, 255), 1)    
+
     # Display the resulting image
     cv2.imshow('Video', frame)
 

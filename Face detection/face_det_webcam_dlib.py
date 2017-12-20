@@ -15,11 +15,11 @@ import argparse
 ap = argparse.ArgumentParser()
 ap.add_argument('-r', '--resolution', 
                 default='720p', 
-                choice=['480p','720p','1080p'],	
+                choices=['480p','720p','1080p'],	
                 help='camera resolution')
 ap.add_argument('-sf','--scalefactor',
-                default=0.5,
-                type=int,
+                default=1.0,
+                type=float,
                 help='multiplication factor for resizing frame dimension')
 args = vars(ap.parse_args())
 
